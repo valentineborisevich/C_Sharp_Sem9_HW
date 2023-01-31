@@ -18,8 +18,8 @@ int RangeSum(int number1, int number2)
 }
 Console.WriteLine("Enter two numbers and I will return sum of all elements between them");
 Console.WriteLine();
-Console.WriteLine("Enter the number");
+Console.WriteLine("Enter number1");
 int m = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Enter the number");
+Console.WriteLine("Enter number2");
 int n = Convert.ToInt32(Console.ReadLine());
 Console.Write($"Sum = {RangeSum(m, n)}");
