@@ -4,18 +4,22 @@
 // M = 4; N = 8. -> 30
 
 
-void PrintNumbers(int number1, int number2)
+int RangeSum(int number1, int number2)
 {
-    if (number1 == number2-1)
+    if (number1 == number2)
     {
-        return;
+        return number2;
     }
-    PrintNumbers(number1-1, number2);
-    Console.Write(number1 + " ");
+    else if (number1 > number2)
+    {
+        return 0;
+    }
+    return number1 + RangeSum(number1 + 1, number2);
 }
-
+Console.WriteLine("Enter two numbers and I will return sum of all elements between them");
+Console.WriteLine();
 Console.WriteLine("Enter the number");
 int m = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Enter the number");
 int n = Convert.ToInt32(Console.ReadLine());
-PrintNumbers(m, n);
+Console.Write($"Sum = {RangeSum(m, n)}");
